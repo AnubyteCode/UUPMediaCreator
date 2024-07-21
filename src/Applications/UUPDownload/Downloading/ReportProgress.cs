@@ -26,7 +26,9 @@ using UnifiedUpdatePlatform.Services.WindowsUpdate.Downloads;
 
 namespace UUPDownload.Downloading
 {
+#pragma warning disable CA1063 // Implement IDisposable Correctly
     public class ReportProgress : IProgress<GeneralDownloadProgress>, IDisposable
+#pragma warning restore CA1063 // Implement IDisposable Correctly
     {
         private readonly Dictionary<string, FileStatus> files = new();
 
@@ -72,7 +74,9 @@ namespace UUPDownload.Downloading
             return "[" + bases + "]";
         }
 
+#pragma warning disable CA1063 // Implement IDisposable Correctly
         public void Dispose()
+#pragma warning restore CA1063 // Implement IDisposable Correctly
         {
             mutex.Dispose();
         }

@@ -27,9 +27,7 @@ namespace UUPDownload
     [Verb("request-download", isDefault: true, HelpText = "Request a download from zero using a different parameters. Use 'help' to see more options.")]
     internal class DownloadRequestOptions
     {
-        [Option('s', "reporting-sku", HelpText = "The sku to report to the Windows Update servers." +
-            
-  Example: Professional, EnterpriseG. Enter 'type editions.txt' to see a full list of possibilities.' ", Required = true, Default = "Professional")]
+        [Option('s', "reporting-sku", HelpText = "The sku to report to the Windows Update servers.\n  Example: Professional, EnterpriseG. Enter 'editions.txt' to see a full list of possibilities.' ", Required = true, Default = "Professional")]
         public OSSkuId ReportingSku
         {
             get; set;
@@ -83,7 +81,7 @@ namespace UUPDownload
             get; set;
         }
 
-        [Option('e', "edition", HelpText = "The edition to get. Must be used with the language parameter. Omit either of these to download everything.\n  Example: Professional, EnterpriseG. Enter 'type editions.txt' to see a full list of possibilities.'", Required = false, Default = "")]
+        [Option('e', "edition", HelpText = "The edition to get. Must be used with the language parameter. Omit either of these to download everything.\n  Example: Professional, EnterpriseG. Enter 'editions.txt' to see a full list of possibilities.'", Required = false, Default = "")]
         public string Edition
         {
             get; set;
@@ -95,9 +93,7 @@ namespace UUPDownload
             get; set;
         }
 
-        [Option('z', "releasetype", HelpText = "The release type to report to the Windows Update servers." +
-            
-  Example: Production", Required = false, Default = "Production")]
+        [Option('z', "releasetype", HelpText = "The release type to report to the Windows Update servers.\n  Example: Production", Required = false, Default = "Production")]
         public string ReleaseType
         {
             get; set;
@@ -143,7 +139,7 @@ namespace UUPDownload
             get; set;
         }
 
-        [Option('e', "edition", HelpText = "The edition to get. Must be used with the language parameter. Omit either of these to download everything.\n  Example: Professional, EnterpriseG. Enter 'type editions.txt' to see a full list of possibilities.' ", Required = false, Default = "")]
+        [Option('e', "edition", HelpText = "The edition to get. Must be used with the language parameter. Omit either of these to download everything.\n  Example: Professional, EnterpriseG. Enter 'editions.txt' to see a full list of possibilities.' ", Required = false, Default = "")]
         public string Edition
         {
             get; set;
@@ -177,15 +173,13 @@ namespace UUPDownload
     [Verb("get-builds", isDefault: false, HelpText = "Get builds in all rings matching the request type")]
     internal class GetBuildsOptions
     {
-        [Option('s', "reporting-sku", HelpText = "The sku to report to the Windows Update servers.\n  Example: Professional, EnterpriseG. Enter 'type editions.txt' to see a full list of possibilities.' ", Required = true, Default = "")]
+        [Option('s', "reporting-sku", HelpText = "The sku to report to the Windows Update servers.\n  Example: Professional, EnterpriseG. Enter 'editions.txt' to see a full list of possibilities.' ", Required = true, Default = "")]
         public OSSkuId ReportingSku
         {
             get; set;
         }
 
-        [Option('t', "machine-type", HelpText = "The architecture to report to the Windows Update servers." +
-            
-  Example: amd64, arm64, unknown, x86, wcemipsv2, axp, sh3, sh3dsp, sh4, sh5, arm, thumb,\n woa, am33, powerpc, powerpcfp, ia64, mips16, mipsfpu, mipsfpu16, ebc, m32r", Required = true)]
+        [Option('t', "machine-type", HelpText = "The architecture to report to the Windows Update servers.\n  Example: amd64, arm64, unknown, x86, wcemipsv2, axp, sh3, sh3dsp, sh4, sh5, arm, thumb,\n woa, am33, powerpc, powerpcfp, ia64, mips16, mipsfpu, mipsfpu16, ebc, m32r", Required = true)]
         public MachineType MachineType
         {
             get; set;
@@ -197,7 +191,7 @@ namespace UUPDownload
             get; set;
         }
 
-        [Option('p', "password", HelpText = "Password for the Windows Insider account to use to generate authorization tokens.\n (If 2FA, must be generated app password) (Optional)", Required = false, Default = "")]
+        [Option('p', "password", HelpText = "Password for the Windows Insider account to use to generate authorization tokens.\n  (If 2FA, must be generated app password) (Optional)", Required = false, Default = "")]
         public string Password
         {
             get; set;

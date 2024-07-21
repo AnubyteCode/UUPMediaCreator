@@ -31,7 +31,7 @@ namespace UUPDownload
     {
         private static void PrintLogo()
         {
-            Logging.Log($"UnifiedUpdatePlatform.Media.Download {Assembly.GetExecutingAssembly().GetName().Version} - Download from the Microsoft Unified Update Platform");
+            Logging.Log($"UnifiedUpdatePlatform.Media.Download {Assembly.GetExecutingAssembly().GetName().Version} - Download from the Microsoft UUP");
             Logging.Log("Copyright (c) Gustave Monce and Contributors. This program comes with ABSOLUTELY NO WARRANTY.");
             Logging.Log("https://github.com/gus33000/UUPMediaCreator");
             Logging.Log("This is free software, and you are welcome to redistribute it under certain conditions.");
